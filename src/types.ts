@@ -22,6 +22,11 @@ export type Json =
 	| string
 	| { [property: string]: Json };
 
+export interface MemeEndpointResponse extends EndpointResponse {
+	title: string;
+	image: string;
+}
+
 /**
  * The path for a request to the API
  */

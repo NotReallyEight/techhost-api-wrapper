@@ -2,6 +2,7 @@ import { Rest } from ".";
 import { Cat } from "./structures/Cat";
 import { Dog } from "./structures/Dog";
 import { Fact } from "./structures/Fact";
+import { Meme } from "./structures/Meme";
 
 /**
  * The client class
@@ -41,5 +42,14 @@ export class Client {
 	async fact(): Promise<Fact | null> {
 		const fact: string | null = await this.rest.request("/fact", "GET");
 		return fact != null ? new Fact(fact) : null;
+	}
+
+	/**
+	 * Get a random meme
+	 * @returns - The Meme class
+	 */
+	async meme(): Promise<Meme | null> {
+		const meme: string | null = await this.rest.request("/meme", "GET");
+		return meme != null ? new Meme(meme) : null;
 	}
 }
