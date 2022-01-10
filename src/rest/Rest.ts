@@ -32,6 +32,9 @@ export class Rest {
 	 */
 	requestsPerSecondResetAt = Date.now();
 
+	/**
+	 * @param client - The client that instantiated this class
+	 */
 	constructor(client: Client) {
 		this.client = client;
 

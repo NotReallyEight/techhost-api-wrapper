@@ -7,6 +7,11 @@ import type APIRequest from "./rest/APIRequest";
  */
 export const BaseURL = "http://api.techhost.live/v1";
 
+export interface EndpointResponse {
+	status: number | string;
+	url: string;
+}
+
 /**
  * Any JSON data
  */

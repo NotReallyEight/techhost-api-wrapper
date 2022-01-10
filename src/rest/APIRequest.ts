@@ -57,7 +57,6 @@ export class APIRequest {
 	status = RequestStatus.Pending;
 
 	/**
-	 *
 	 * @param rest - The rest manager client that instantiated this
 	 * @param path - The path of this request
 	 * @param method - Method used for this request
