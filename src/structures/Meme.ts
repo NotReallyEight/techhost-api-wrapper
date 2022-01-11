@@ -27,13 +27,10 @@ export class Meme {
 	/**
 	 * @param data - The data received in the request
 	 */
-	constructor(data: string) {
-		const parsed: MemeEndpointResponse = JSON.parse(
-			data
-		) as MemeEndpointResponse;
-		this.status = parsed.status;
-		this.post = parsed.url;
-		this.title = parsed.title;
-		this.result = parsed.image;
+	constructor(data: MemeEndpointResponse) {
+		this.status = data.status;
+		this.post = data.url;
+		this.title = data.title;
+		this.result = data.image;
 	}
 }

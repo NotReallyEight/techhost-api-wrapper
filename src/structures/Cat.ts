@@ -17,9 +17,8 @@ export class Cat {
 	/**
 	 * @param data - The data received in the request
 	 */
-	constructor(data: string) {
-		const parsed: EndpointResponse = JSON.parse(data) as EndpointResponse;
-		this.status = parsed.status;
-		this.result = parsed.url;
+	constructor(data: EndpointResponse) {
+		this.status = data.status;
+		this.result = data.url;
 	}
 }
