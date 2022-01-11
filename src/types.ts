@@ -7,11 +7,17 @@ import type APIRequest from "./rest/APIRequest";
  */
 export const BaseURL = "http://api.techhost.live/v1";
 
+/**
+ * A base endpoint response
+ */
 export interface EndpointResponse {
 	status: number | string;
 	url: string;
 }
 
+/**
+ * The Http Code endpoint response
+ */
 export interface HttpCodeEndpointResponse
 	extends Omit<EndpointResponse, "url"> {
 	code: number;
@@ -29,6 +35,9 @@ export type Json =
 	| string
 	| { [property: string]: Json };
 
+/**
+ * The Meme endpoint response
+ */
 export interface MemeEndpointResponse extends EndpointResponse {
 	title: string;
 	image: string;
@@ -38,6 +47,14 @@ export interface MemeEndpointResponse extends EndpointResponse {
  * The path for a request to the API
  */
 export type Path = `/${string}`;
+
+/**
+ * The Reddit endpoint response
+ */
+export interface RedditEndpointResponse extends EndpointResponse {
+	title: string;
+	image: string;
+}
 
 /**
  * The method of a request to the API

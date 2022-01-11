@@ -1,10 +1,16 @@
-import type { HttpCodeEndpointResponse } from ".";
+import type {
+	EndpointResponse,
+	HttpCodeEndpointResponse,
+	MemeEndpointResponse,
+	RedditEndpointResponse,
+} from ".";
 import { Rest } from ".";
 import { Cat } from "./structures/Cat";
 import { Dog } from "./structures/Dog";
 import { Fact } from "./structures/Fact";
 import { HttpCode } from "./structures/HttpCode";
 import { Meme } from "./structures/Meme";
+import { Reddit } from "./structures/Reddit";
 
 /**
  * The client class
@@ -24,7 +30,7 @@ export class Client {
 	 * @returns - The Cat class
 	 */
 	async cat(): Promise<Cat | null> {
-		const cat: string | null = await this.rest.get("/cat");
+		const cat: EndpointResponse | null = await this.rest.get("/cat");
 		return cat != null ? new Cat(cat) : null;
 	}
 
@@ -33,7 +39,7 @@ export class Client {
 	 * @returns - The Dog class
 	 */
 	async dog(): Promise<Dog | null> {
-		const dog: string | null = await this.rest.get("/dog");
+		const dog: EndpointResponse | null = await this.rest.get("/dog");
 		return dog != null ? new Dog(dog) : null;
 	}
 
@@ -42,7 +48,7 @@ export class Client {
 	 * @returns - The Fact class
 	 */
 	async fact(): Promise<Fact | null> {
-		const fact: string | null = await this.rest.get("/fact");
+		const fact: EndpointResponse | null = await this.rest.get("/fact");
 		return fact != null ? new Fact(fact) : null;
 	}
 
@@ -51,7 +57,7 @@ export class Client {
 	 * @returns - The Meme class
 	 */
 	async meme(): Promise<Meme | null> {
-		const meme: string | null = await this.rest.get("/meme");
+		const meme: MemeEndpointResponse | null = await this.rest.get("/meme");
 		return meme != null ? new Meme(meme) : null;
 	}
 
@@ -65,5 +71,17 @@ export class Client {
 			`/http?code=${code}`
 		);
 		return httpCode != null ? new HttpCode(httpCode) : null;
+	}
+
+	/**
+	 * Get a random post from a subreddit
+	 * @param subreddit - The subreddit
+	 * @returns - The HttpCode class
+	 */
+	async reddit(subreddit: string): Promise<Reddit | null> {
+		const post: RedditEndpointResponse | null = await this.rest.get(
+			`/reddit?sub=${subreddit}`
+		);
+		return post != null ? new Reddit(post) : null;
 	}
 }
