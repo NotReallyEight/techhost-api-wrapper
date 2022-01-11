@@ -1,7 +1,7 @@
 import type { MemeEndpointResponse } from "..";
 
 /**
- * A class representing the response from the cat endpoint
+ * A class representing the response from the meme endpoint
  */
 export class Meme {
 	/**

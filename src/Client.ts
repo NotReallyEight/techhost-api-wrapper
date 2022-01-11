@@ -11,6 +11,7 @@ import { Fact } from "./structures/Fact";
 import { HttpCode } from "./structures/HttpCode";
 import { Meme } from "./structures/Meme";
 import { Reddit } from "./structures/Reddit";
+import { Screenshot } from "./structures/Screenshot";
 
 /**
  * The client class
@@ -76,12 +77,24 @@ export class Client {
 	/**
 	 * Get a random post from a subreddit
 	 * @param subreddit - The subreddit
-	 * @returns - The HttpCode class
+	 * @returns - The Reddit class
 	 */
 	async reddit(subreddit: string): Promise<Reddit | null> {
 		const post: RedditEndpointResponse | null = await this.rest.get(
 			`/reddit?sub=${subreddit}`
 		);
 		return post != null ? new Reddit(post) : null;
+	}
+
+	/**
+	 * Get a url from a screenshot
+	 * @param url - The url
+	 * @returns - The Screenshot class
+	 */
+	async screenshot(url: string): Promise<Screenshot | null> {
+		const screenshot: EndpointResponse | null = await this.rest.get(
+			`/screenshot?url=${url}`
+		);
+		return screenshot != null ? new Screenshot(screenshot) : null;
 	}
 }

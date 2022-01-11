@@ -1,7 +1,7 @@
 import type { HttpCodeEndpointResponse } from "..";
 
 /**
- * A class representing the response from the cat endpoint
+ * A class representing the response from the http code endpoint
  */
 export class HttpCode {
 	/**

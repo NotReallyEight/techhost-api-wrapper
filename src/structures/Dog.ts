@@ -1,7 +1,7 @@
 import type { EndpointResponse } from "..";
 
 /**
- * A class representing the response from the cat endpoint
+ * A class representing the response from the dog endpoint
  */
 export class Dog {
 	/**

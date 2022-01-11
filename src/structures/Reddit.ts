@@ -1,7 +1,7 @@
 import type { RedditEndpointResponse } from "..";
 
 /**
- * A class representing the response from the cat endpoint
+ * A class representing the response from the reddit endpoint
  */
 export class Reddit {
 	/**
