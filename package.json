@@ -3,13 +3,19 @@
   "version": "0.0.1",
   "description": "An open source API wrapper for TechHost API.",
   "main": "dist/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "build": "npm run lint && npm run prettier && npm run compile",
     "compile": "tsc",
     "lint": "eslint src/**/*.ts --fix",
+    "postversion": "git push && git push --tags",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
     "prettier": "prettier --write src/**/*.ts",
+    "preversion": "npm run lint",
     "start": "npm ci && npm run build && node .",
-    "test": "eslint src && prettier --check src/**/*.ts && tsc --noEmit"
+    "test": "eslint src && prettier --check src/**/*.ts && tsc --noEmit",
+    "version": "npm run prettier && git add -A src"
   },
   "repository": {
     "type": "git",
