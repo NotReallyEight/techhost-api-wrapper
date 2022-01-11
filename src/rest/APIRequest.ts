@@ -1,6 +1,6 @@
 import { request } from "node:http";
 import type { OutgoingHttpHeaders } from "node:http";
-import { URL, URLSearchParams } from "node:url";
+import { URLSearchParams } from "node:url";
 import { RequestStatus, BaseURL } from "../types";
 import type {
 	Json,
@@ -89,10 +89,8 @@ export class APIRequest {
 	/**
 	 * The full URL of this request
 	 */
-	get url(): URL {
-		const url = new URL(this.baseUrl + this.path);
-
-		url.search = this.query.toString();
+	get url(): string {
+		const url = `${this.baseUrl}${this.path}`;
 		return url;
 	}
 
@@ -163,8 +161,6 @@ export class APIRequest {
 					[301, 302].includes(res.statusCode!) &&
 					res.headers.location != null
 				) {
-					this.url.href = res.headers.location;
-					this.url.search = this.query.toString();
 					this.make(resolve, reject, chunk);
 					return;
 				}
@@ -193,9 +189,7 @@ export class APIRequest {
 
 		req.once("error", (error) => {
 			reject(
-				new Error(
-					`Request to ${this.url.href} failed with reason: ${error.message}`
-				)
+				new Error(`Request to ${this.url} failed with reason: ${error.message}`)
 			);
 			this.status = RequestStatus.Failed;
 		});

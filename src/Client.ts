@@ -1,7 +1,9 @@
+import type { HttpCodeEndpointResponse } from ".";
 import { Rest } from ".";
 import { Cat } from "./structures/Cat";
 import { Dog } from "./structures/Dog";
 import { Fact } from "./structures/Fact";
+import { HttpCode } from "./structures/HttpCode";
 import { Meme } from "./structures/Meme";
 
 /**
@@ -22,7 +24,7 @@ export class Client {
 	 * @returns - The Cat class
 	 */
 	async cat(): Promise<Cat | null> {
-		const cat: string | null = await this.rest.request("/cat", "GET");
+		const cat: string | null = await this.rest.get("/cat");
 		return cat != null ? new Cat(cat) : null;
 	}
 
@@ -31,7 +33,7 @@ export class Client {
 	 * @returns - The Dog class
 	 */
 	async dog(): Promise<Dog | null> {
-		const dog: string | null = await this.rest.request("/dog", "GET");
+		const dog: string | null = await this.rest.get("/dog");
 		return dog != null ? new Dog(dog) : null;
 	}
 
@@ -40,7 +42,7 @@ export class Client {
 	 * @returns - The Fact class
 	 */
 	async fact(): Promise<Fact | null> {
-		const fact: string | null = await this.rest.request("/fact", "GET");
+		const fact: string | null = await this.rest.get("/fact");
 		return fact != null ? new Fact(fact) : null;
 	}
 
@@ -49,7 +51,19 @@ export class Client {
 	 * @returns - The Meme class
 	 */
 	async meme(): Promise<Meme | null> {
-		const meme: string | null = await this.rest.request("/meme", "GET");
+		const meme: string | null = await this.rest.get("/meme");
 		return meme != null ? new Meme(meme) : null;
+	}
+
+	/**
+	 * Get information about an http code
+	 * @param code - The http code
+	 * @returns - The HttpCode class
+	 */
+	async httpCode(code: number): Promise<HttpCode | null> {
+		const httpCode: HttpCodeEndpointResponse | null = await this.rest.get(
+			`/http?code=${code}`
+		);
+		return httpCode != null ? new HttpCode(httpCode) : null;
 	}
 }

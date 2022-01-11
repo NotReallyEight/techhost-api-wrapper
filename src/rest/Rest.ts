@@ -104,7 +104,8 @@ export class Rest {
 		if (res.statusCode >= 200 && res.statusCode < 300)
 			// If the request is ok parse the data received
 			data =
-				res.headers["content-type"] === "application/json"
+				res.headers["content-type"] === "application/json" ||
+				res.headers["content-type"] === "application/json; charset=utf-8"
 					? (JSON.parse(res.data!) as unknown)
 					: res.data;
 		else if (res.statusCode >= 300 && res.statusCode < 400)

@@ -12,6 +12,13 @@ export interface EndpointResponse {
 	url: string;
 }
 
+export interface HttpCodeEndpointResponse
+	extends Omit<EndpointResponse, "url"> {
+	code: number;
+	name: string;
+	description: string;
+}
+
 /**
  * Any JSON data
  */
