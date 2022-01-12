@@ -78,7 +78,7 @@ Please adhere to this project's `code of conduct`.
 
 ## Authors
 
-- [@NotReallyEight](https://.github.com/NotReallyEight)
+- [@NotReallyEight](https://github.com/NotReallyEight)
 
 
 ## Acknowledgements
