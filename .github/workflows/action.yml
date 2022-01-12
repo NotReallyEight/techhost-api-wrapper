@@ -16,6 +16,7 @@ jobs:
       - run: npm ci
       - run: npm run build
   documentate:
+    needs: check-eslint
     runs-on: ubuntu-latet
     name: Deploy Documentation
     steps:
