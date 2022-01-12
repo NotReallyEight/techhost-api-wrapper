@@ -15,3 +15,10 @@ jobs:
           node-version: "16"
       - run: npm ci
       - run: npm run build
+      - run: npm run documentate
+      - uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: out/
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
