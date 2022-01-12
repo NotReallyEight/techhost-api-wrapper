@@ -31,7 +31,7 @@ client.cat().then(console.log);
 
 ```typescript
 import TechHost from "techhost-api-wrapper";
-const client = new TechHost;
+const client = new TechHost();
 
 void client.cat().then(console.log);
 ```
