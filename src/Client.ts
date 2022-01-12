@@ -87,13 +87,14 @@ export class Client {
 	}
 
 	/**
-	 * Get a url from a screenshot
+	 * Get a screenshot from a url
 	 * @param url - The url
 	 * @returns - The Screenshot class
 	 */
 	async screenshot(url: string): Promise<Screenshot | null> {
+		if (!/https?:\/\//g.test(url)) url = `http://${url}`;
 		const screenshot: EndpointResponse | null = await this.rest.get(
-			`/screenshot?url=${url}`
+			`/screenshot?url=${encodeURI(url)}`
 		);
 		return screenshot != null ? new Screenshot(screenshot) : null;
 	}
