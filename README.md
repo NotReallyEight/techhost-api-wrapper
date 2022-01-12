@@ -21,8 +21,8 @@ npm install techhost-api-wrapper
 #### JavaScript
 
 ```javascript
-const TechHost = require("techhost-api-wrapper");
-const client = new TechHost();
+const { Client } = require("techhost-api-wrapper");
+const client = new Client();
 
 client.cat().then(console.log);
 ```
@@ -30,8 +30,8 @@ client.cat().then(console.log);
 #### TypeScript
 
 ```typescript
-import TechHost from "techhost-api-wrapper";
-const client = new TechHost();
+import { Client } from "techhost-api-wrapper";
+const client = new Client();
 
 void client.cat().then(console.log);
 ```
@@ -39,7 +39,7 @@ void client.cat().then(console.log);
 
 ## Documentation
 
-[Documentation](https://github.com/NotReallyEight/techhost-api-wrapper)
+[Documentation](https://notreallyeight.tk/techhost-api-wrapper)
 
 
 ## FAQ
