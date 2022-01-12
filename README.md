@@ -10,7 +10,7 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 ## Installation
 
-Install techhost-api-wrapper with [npm](https://npmjs.com).
+Install techhost-api-wrapper with [npm](https://npmjs.com/package/techhost-api-wrapper).
 
 ```bash
 npm install techhost-api-wrapper
