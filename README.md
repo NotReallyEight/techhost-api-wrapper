@@ -1,12 +1,12 @@
 # TechHost API Wrapper
 
-An open source API wrapper for TechHost API.
+An open source API wrapper for [TechHost API](https://api.techhost.live).
 
 ## Badges
 
 Add badges from somewhere like: [shields.io](https://shields.io/)
 
-[![Discord](https://img.shields.io/discord/746291190009430049?color=%235865f2&label=ATN%20Development&logo=discord)](https://discord.gg/qnqdUxF) [![GitHub repo size](https://img.shields.io/github/repo-size/NotReallyEight/techhost-api-wrapper?color=%23171515&label=Repository%20Size&logo=github)](https://github.com/NotReallyEight/techhost-api-wrapper) [![GitHub](https://img.shields.io/github/license/NotReallyEight/techhost-api-wrapper?label=License)](https://www.apache.org/licenses/LICENSE-2.0) [![GitHub Repo stars](https://img.shields.io/github/stars/NotReallyEight/techhost-api-wrapper?color=%23171515&label=Repository%20Stars&logo=github)](https://github.com/NotReallyEight/techhost-api-wrapper) [![npm (tag)](https://img.shields.io/npm/v/techhost-api-wrapper/latest?color=%23cc3534&logo=npm)](https://npmjs.com/package/techhost-api-wrapper) 
+[![Discord](https://img.shields.io/discord/746291190009430049?color=%235865f2&label=ATN%20Development&logo=discord)](https://discord.gg/qnqdUxF) [![GitHub repo size](https://img.shields.io/github/repo-size/NotReallyEight/techhost-api-wrapper?color=%23171515&label=Repository%20Size&logo=github)](https://github.com/NotReallyEight/techhost-api-wrapper) [![GitHub](https://img.shields.io/github/license/NotReallyEight/techhost-api-wrapper?label=License)](https://apache.org/licenses/LICENSE-2.0) [![GitHub Repo stars](https://img.shields.io/github/stars/NotReallyEight/techhost-api-wrapper?color=%23171515&label=Repository%20Stars&logo=github)](https://github.com/NotReallyEight/techhost-api-wrapper) [![npm (tag)](https://img.shields.io/npm/v/techhost-api-wrapper/latest?color=%23cc3534&logo=npm)](https://npmjs.com/package/techhost-api-wrapper) 
 ## Installation
 
 Install techhost-api-wrapper with [npm](https://npmjs.com).
@@ -63,7 +63,7 @@ Node.JS v16 is required in order for the package to run smoothly.
 
 ## License
 
-This project is licensed through the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) license.
+This project is licensed through the [Apache-2.0](https://.apache.org/licenses/LICENSE-2.0) license.
 
 
 ## Feedback
@@ -79,7 +79,7 @@ Please adhere to this project's `code of conduct`.
 
 ## Authors
 
-- [@NotReallyEight](https://www.github.com/NotReallyEight)
+- [@NotReallyEight](https://.github.com/NotReallyEight)
 
 
 ## Acknowledgements
