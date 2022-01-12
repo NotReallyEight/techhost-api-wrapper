@@ -15,10 +15,22 @@ jobs:
           node-version: "16"
       - run: npm ci
       - run: npm run build
-      - run: npm run documentate
-      - uses: crazy-max/ghaction-github-pages@v2
+  documentate:
+    runs-on: ubuntu-latet
+    name: Deploy Documentation
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - name: Install dependencies
+        run: npm ci
+      - name: Generate documentation
+        run: npm run documentate
+      - name: Deploy documentation 
+        uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: out/
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          build_dir: docs/.vuepress/dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
