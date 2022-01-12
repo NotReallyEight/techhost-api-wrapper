@@ -17,7 +17,7 @@ jobs:
       - run: npm run build
   documentate:
     needs: check-eslint
-    runs-on: ubuntu-latet
+    runs-on: ubuntu-latest
     name: Deploy Documentation
     steps:
       - uses: actions/checkout@v2
