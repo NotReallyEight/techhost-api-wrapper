@@ -1,6 +1,6 @@
 {
   "name": "techhost-api-wrapper",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An open source API wrapper for TechHost API.",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
