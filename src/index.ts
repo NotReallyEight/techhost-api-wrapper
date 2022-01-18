@@ -5,6 +5,7 @@ import rest from "./rest";
  */
 export * from "./Client";
 export * from "./rest";
+export * from "./structures";
 export * from "./types";
 
 export default {
