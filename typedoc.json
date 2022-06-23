@@ -1,0 +1,7 @@
+{
+	"out": "./out",
+	"tsconfig": "./tsconfig.json",
+	"readme": "./README.md",
+	"name": "TechHost API Wrapper",
+	"excludeNotDocumented": true
+}
