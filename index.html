@@ -1,0 +1,98 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>TechHost API Wrapper</title><meta name="description" content="Documentation for TechHost API Wrapper"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">TechHost API Wrapper</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>TechHost API Wrapper </h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#techhost-api-wrapper" id="techhost-api-wrapper" style="color: inherit; text-decoration: none;">
+  <h1>TechHost API Wrapper</h1>
+</a>
+<p>An open source API wrapper for <a href="https://api.techhost.live">TechHost API</a>.</p>
+
+<a href="#badges" id="badges" style="color: inherit; text-decoration: none;">
+  <h2>Badges</h2>
+</a>
+<p><a href="https://discord.gg/qnqdUxF"><img src="https://img.shields.io/discord/746291190009430049?color=%235865f2&label=ATN%20Development&logo=discord" alt="Discord"></a> <a href="https://github.com/NotReallyEight/techhost-api-wrapper"><img src="https://img.shields.io/github/repo-size/NotReallyEight/techhost-api-wrapper?color=%23171515&label=Repository%20Size&logo=github" alt="GitHub repo size"></a> <a href="https://apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/github/license/NotReallyEight/techhost-api-wrapper?label=License" alt="GitHub"></a> <a href="https://github.com/NotReallyEight/techhost-api-wrapper"><img src="https://img.shields.io/github/stars/NotReallyEight/techhost-api-wrapper?color=%23171515&label=Repository%20Stars&logo=github" alt="GitHub Repo stars"></a> <a href="https://npmjs.com/package/techhost-api-wrapper"><img src="https://img.shields.io/npm/v/techhost-api-wrapper/latest?color=%23cc3534&logo=npm" alt="npm (tag)"></a> </p>
+
+<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+  <h2>Installation</h2>
+</a>
+<p>Install techhost-api-wrapper with <a href="https://npmjs.com/package/techhost-api-wrapper">npm</a>.</p>
+<pre><code class="language-bash"><span class="hl-0">npm install techhost-api-wrapper</span>
+</code></pre>
+
+<a href="#usageexamples" id="usageexamples" style="color: inherit; text-decoration: none;">
+  <h2>Usage/Examples</h2>
+</a>
+
+<a href="#javascript" id="javascript" style="color: inherit; text-decoration: none;">
+  <h4>JavaScript</h4>
+</a>
+<pre><code class="language-javascript"><span class="hl-1">const</span><span class="hl-0"> { </span><span class="hl-2">Client</span><span class="hl-0"> } = </span><span class="hl-3">require</span><span class="hl-0">(</span><span class="hl-4">&quot;techhost-api-wrapper&quot;</span><span class="hl-0">);</span><br/><span class="hl-1">const</span><span class="hl-0"> </span><span class="hl-2">client</span><span class="hl-0"> = </span><span class="hl-1">new</span><span class="hl-0"> </span><span class="hl-3">Client</span><span class="hl-0">();</span><br/><br/><span class="hl-5">client</span><span class="hl-0">.</span><span class="hl-3">cat</span><span class="hl-0">().</span><span class="hl-3">then</span><span class="hl-0">(</span><span class="hl-5">console</span><span class="hl-0">.</span><span class="hl-5">log</span><span class="hl-0">);</span>
+</code></pre>
+
+<a href="#typescript" id="typescript" style="color: inherit; text-decoration: none;">
+  <h4>TypeScript</h4>
+</a>
+<pre><code class="language-typescript"><span class="hl-6">import</span><span class="hl-0"> { </span><span class="hl-5">Client</span><span class="hl-0"> } </span><span class="hl-6">from</span><span class="hl-0"> </span><span class="hl-4">&quot;techhost-api-wrapper&quot;</span><span class="hl-0">;</span><br/><span class="hl-1">const</span><span class="hl-0"> </span><span class="hl-2">client</span><span class="hl-0"> = </span><span class="hl-1">new</span><span class="hl-0"> </span><span class="hl-3">Client</span><span class="hl-0">();</span><br/><br/><span class="hl-1">void</span><span class="hl-0"> </span><span class="hl-5">client</span><span class="hl-0">.</span><span class="hl-3">cat</span><span class="hl-0">().</span><span class="hl-3">then</span><span class="hl-0">(</span><span class="hl-5">console</span><span class="hl-0">.</span><span class="hl-5">log</span><span class="hl-0">);</span>
+</code></pre>
+
+<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+  <h2>Documentation</h2>
+</a>
+<p><a href="https://notreallyeight.tk/techhost-api-wrapper">Documentation</a></p>
+
+<a href="#faq" id="faq" style="color: inherit; text-decoration: none;">
+  <h2>FAQ</h2>
+</a>
+
+<a href="#does-the-package-support-typescript" id="does-the-package-support-typescript" style="color: inherit; text-decoration: none;">
+  <h4>Does the package support TypeScript?</h4>
+</a>
+<p>Yes! It is written in TypeScript, so it also has typings support!</p>
+
+<a href="#what-is-the-minimum-version-of-nodejs-i-need-to-run-the-package" id="what-is-the-minimum-version-of-nodejs-i-need-to-run-the-package" style="color: inherit; text-decoration: none;">
+  <h4>What is the minimum version of Node.JS I need to run the package?</h4>
+</a>
+<p>Node.JS v16 is required in order for the package to run smoothly.</p>
+
+<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+  <h2>Features</h2>
+</a>
+<ul>
+<li>Cat endpoint</li>
+<li>Dog endpoint</li>
+<li>Fact endpoint</li>
+<li>Meme endpoint</li>
+<li>HTTP Code endpoint</li>
+<li>Reddit endpoint</li>
+<li>Screenshot endpoint</li>
+</ul>
+
+<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+  <h2>License</h2>
+</a>
+<p>This project is licensed through the <a href="https://.apache.org/licenses/LICENSE-2.0">Apache-2.0</a> license.</p>
+
+<a href="#feedback" id="feedback" style="color: inherit; text-decoration: none;">
+  <h2>Feedback</h2>
+</a>
+<p>If you have any feedback, please reach out to us at <a href="https://discord.gg/qnqdUxF">our Discord Server</a>.</p>
+
+<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+  <h2>Contributing</h2>
+</a>
+<p>Contributions are always welcome! Open up a Pull Request or an Issue.</p>
+<p>Please adhere to this project&#39;s <code>code of conduct</code>.</p>
+
+<a href="#authors" id="authors" style="color: inherit; text-decoration: none;">
+  <h2>Authors</h2>
+</a>
+<ul>
+<li><a href="https://github.com/NotReallyEight">@NotReallyEight</a></li>
+</ul>
+
+<a href="#acknowledgements" id="acknowledgements" style="color: inherit; text-decoration: none;">
+  <h2>Acknowledgements</h2>
+</a>
+<ul>
+<li><a href="https://techhost.live">TechHost</a></li>
+<li><a href="https://api.techhost.live">TechHost API</a></li>
+<li><a href="https://discord.gg/qnqdUxF">ATN Development</a></li>
+</ul>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-enum"><a href="enums/RequestStatus.html" class="tsd-kind-icon">Request<wbr/>Status</a></li><li class="tsd-kind-class"><a href="classes/APIRequest.html" class="tsd-kind-icon">APIRequest</a></li><li class="tsd-kind-class"><a href="classes/Client.html" class="tsd-kind-icon">Client</a></li><li class="tsd-kind-class"><a href="classes/Rest.html" class="tsd-kind-icon">Rest</a></li><li class="tsd-kind-interface"><a href="interfaces/EndpointResponse.html" class="tsd-kind-icon">Endpoint<wbr/>Response</a></li><li class="tsd-kind-interface"><a href="interfaces/HttpCodeEndpointResponse.html" class="tsd-kind-icon">Http<wbr/>Code<wbr/>Endpoint<wbr/>Response</a></li><li class="tsd-kind-interface"><a href="interfaces/MemeEndpointResponse.html" class="tsd-kind-icon">Meme<wbr/>Endpoint<wbr/>Response</a></li><li class="tsd-kind-interface"><a href="interfaces/RedditEndpointResponse.html" class="tsd-kind-icon">Reddit<wbr/>Endpoint<wbr/>Response</a></li><li class="tsd-kind-interface"><a href="interfaces/RequestOptions.html" class="tsd-kind-icon">Request<wbr/>Options</a></li><li class="tsd-kind-interface"><a href="interfaces/Response.html" class="tsd-kind-icon">Response</a></li><li class="tsd-kind-type-alias"><a href="modules.html#Json" class="tsd-kind-icon">Json</a></li><li class="tsd-kind-type-alias"><a href="modules.html#Path" class="tsd-kind-icon">Path</a></li><li class="tsd-kind-type-alias"><a href="modules.html#RequestMethod" class="tsd-kind-icon">Request<wbr/>Method</a></li><li class="tsd-kind-variable"><a href="modules.html#BaseURL" class="tsd-kind-icon">BaseURL</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li><li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li><li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
